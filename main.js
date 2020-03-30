@@ -12,7 +12,7 @@ fetch('http://localhost:5000/api/2k/total')
             const teamCell = newRow.insertCell(0);
             const scoreCell = newRow.insertCell(1);
             teamCell.appendChild(document.createTextNode(teamName));
-            scoreCell.appendChild(document.createTextNode(response[teamName] ^ SCORE_EXPONENTIAL));
+            scoreCell.appendChild(document.createTextNode(Math.pow(response[teamName], SCORE_EXPONENTIAL)));
         }
         table.style.display = 'table';
         document.getElementById('loading').style.display = 'none';

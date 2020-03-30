@@ -9,4 +9,5 @@
 table, td, tr, th {
     border: 1px solid black;
     border-collapse: collapse;
+    padding: 2px;
 }

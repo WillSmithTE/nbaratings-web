@@ -22,8 +22,15 @@
         </thead>
         <tbody></tbody>
     </table>
-    Win Efficiency is the ratio of wins in the 2019-20 season to the expected output as per NBA 2K; e.g. the Raptors have a great win efficiency because a lot of their minutes have been played by guys with low 2K ratings and yet they have a lot of wins.<br />
-     = wins / SUM_ALL_PLAYERS(2019_20_minutes x scaled_2k_rating)
+    <ul>
+        <li>
+            Win Efficiency is the ratio of wins in the 2019-20 season to the expected output as per NBA 2K; e.g. the Raptors have a great win efficiency because a lot of their minutes have been played by guys with low 2K ratings and yet they have a lot of wins.<br />
+         = wins / SUM_ALL_PLAYERS(2019_20_minutes x scaled_2k_rating)
+        </li>
+        <li>
+            To determine a player's value their rating isn't just added. Every player's value is raised to the power of 8 so that 2 players of ratings 75 and 100 create the same amount of value when player of 75 plays 10x the minutes of the player of 100. Yeah it's not perfect...
+        </li>
+    </ul>
      <h1>Player Ratings</h1>
      <table id="playerTable">
          <thead>

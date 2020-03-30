@@ -44,7 +44,7 @@ fetch('http://localhost:5000/api/player')
             const teamCell = newRow.insertCell(2);
             const value19_20Cell = newRow.insertCell(3);
             const minutesCell = newRow.insertCell(4);
-            nameCell.appendChild(document.createTextNode(playerName));
+            nameCell.appendChild(document.createTextNode(formatName(playerName)));
             ratingCell.appendChild(document.createTextNode(response[playerName].rating));
             teamCell.appendChild(document.createTextNode(response[playerName].teamName));
             value19_20Cell.appendChild(document.createTextNode((response[playerName].value19_20)));
@@ -70,4 +70,11 @@ function scaleValues(object, propertyName) {
     Object.keys(object).forEach((key) => {
         object[key][propertyName] = Math.round(10000 * (object[key][propertyName] - min) / (max - min)) / 100;
     });
+}
+
+function formatName(name) {
+    return name
+        .split(' ')
+        .map((split) => split.charAt(0).toUpperCase() + split.slice(1))
+        .join(' ');
 }
